@@ -39,7 +39,7 @@ const Product = () => {
 
   const addToCart = async (product) => {
     try {
-      const response = await axios.post('http://localhost:3000/carrito', product);
+      const response = await axios.post('https://backend-ecommerce-chi.vercel.app/carrito', product);
       // Manejar la respuesta del backend según sea necesario
       setCartMessage('Producto añadido al carrito');
     } catch (error) {
