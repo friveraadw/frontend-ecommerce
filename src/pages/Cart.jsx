@@ -36,7 +36,7 @@ const Cart = () => {
 
   const addToCart = async (product) => {
     try {
-      const response = await axios.post('http://localhost:3000/carrito', product);
+      const response = await axios.post('https://backend-ecommerce-chi.vercel.app/carrito', product);
       setCartMessage('Producto añadido al carrito');
     } catch (error) {
       console.log(error);
@@ -45,7 +45,7 @@ const Cart = () => {
 
   const removeAllProducts = async () => {
     try {
-      await axios.delete('http://localhost:3000/carrito');
+      await axios.delete('https://backend-ecommerce-chi.vercel.app/carrito');
       setProductList([]);
     } catch (error) {
       console.log(error);
